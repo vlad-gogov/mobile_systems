@@ -9,7 +9,7 @@ Page {
     }
 
     function accept() {
-        console.log(parseInt(a.text) + parseInt(b.text))
+        console.log(parseFloat(a.text) + parseFloat(b.text))
         clearText()
     }
 
@@ -35,20 +35,32 @@ Page {
                     id: a
                     width: page.width / 2
                     placeholderText: 'Num 1'
-                    validator: IntValidator{}
+                    validator: DoubleValidator{}
                 }
 
                 TextField {
                     id: b
                     width: page.width / 2
                     placeholderText: 'Num 2'
-                    validator: IntValidator{}
+                    validator: DoubleValidator{}
                 }
             }
 
             Button {
                 text: "Сложить"
-                onClicked: sum = parseInt(a.text) + parseInt(b.text), console.log(sum)
+                onClicked: sum = parseFloat(a.text) + parseFloat(b.text), console.log(sum)
+                width: page.width
+            }
+
+            Button {
+                text: "Cos"
+                onClicked: console.log(Math.cos(a.text))
+                width: page.width
+            }
+
+            Button {
+                text: "Sin"
+                onClicked: console.log(Math.cos(b.text))
                 width: page.width
             }
         }

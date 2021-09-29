@@ -22,10 +22,12 @@ Page {
 
         TextSwitch {
             text: "Выключен"
+            automaticCheck: slid.value > 50 ? false : true
             onCheckedChanged: checked == true ? text = "Включен" : text = "Выключен"
         }
 
         Slider {
+            id: slid
             width: parent.width
             label: "Текущее значние: " + value
             minimumValue: 0

@@ -14,11 +14,24 @@ Page {
         Rectangle {
             id: rec_A
             color: "black"; width: 200; height: 200
+            Text {
+               text: "Текст"
+               color: 'white'
+               anchors.horizontalCenter: rec_A.horizontalCenter
+               anchors.verticalCenter: rec_A.verticalCenter
+            }
 
         }
 
         Rectangle {
+            id: transfor
             color: rec_A.color; width: rec_A.width; height: rec_A.height
+            Text {
+               text: "Текст"
+               color: 'white'
+               anchors.horizontalCenter: transfor.horizontalCenter
+               anchors.verticalCenter: transfor.verticalCenter
+            }
             transform : [
                 Scale { yScale: 0.5; xScale: 1.2 },
                 Rotation {angle: 135;},

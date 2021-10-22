@@ -23,21 +23,5 @@ Page {
                 onPressAndHold: counter.a = 0
                 width: page.width - 50
             }
-
-            Button {
-                x: page.width / 2 - this.width / 2
-                text: "Min"
-                onClicked: counter.a -= 1
-                onPressAndHold: counter.a = 0
-                width: page.width - 50
-            }
-
-            Button {
-                x: page.width / 2 - this.width / 2
-                text: "Mult * 2"
-                onClicked: counter.a *= 2
-                onPressAndHold: counter.a = 0
-                width: page.width - 50
-            }
         }
 }

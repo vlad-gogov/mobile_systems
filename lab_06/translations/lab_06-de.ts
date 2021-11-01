@@ -34,13 +34,5 @@
         <source>Data base</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Configuration Value</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Configuration Group</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 </TS>

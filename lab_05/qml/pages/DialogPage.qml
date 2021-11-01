@@ -21,8 +21,6 @@ Page {
 
         Column {
             id: column
-            //anchors.fill: parent;
-            //width: page.width
             spacing: Theme.paddingLarge
             anchors.horizontalCenter: page.horizontalCenter
 

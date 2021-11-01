@@ -22,6 +22,7 @@ DISTFILES += qml/lab_06.qml \
     qml/pages/ConfigurationValue.qml \
     qml/pages/CurrencyRate.qml \
     qml/pages/CurrencyRateXML.qml \
+    qml/pages/DAO.qml \
     qml/pages/DataBase.qml \
     qml/pages/ListModelJava.qml \
     qml/pages/Listmodel.qml \

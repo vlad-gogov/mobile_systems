@@ -20,7 +20,6 @@ DISTFILES += qml/lab_05.qml \
     qml/cover/CoverPage.qml \
     qml/pages/Attach.qml \
     qml/pages/AttachSecond.qml \
-    qml/pages/CoverCounter.qml \
     qml/pages/DialogPage.qml \
     qml/pages/ListMenu.qml \
     qml/pages/ListView.qml \

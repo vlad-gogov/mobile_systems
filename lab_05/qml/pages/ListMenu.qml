@@ -22,7 +22,7 @@ Page {
                     onClicked: console.log(text + ": " + model.index)
                 }
                 MenuItem {
-                    text: "Menu Item 1"
+                    text: "Menu Item 2"
                     onClicked: console.log(text + ": " + model.index)
                 }
             }

@@ -3,7 +3,6 @@ import Sailfish.Silica 1.0
 
 Page {
     id: page
-    //cover: Qt.resolvedUrl("CoverCounter.qml")
 
     Grid {
         columns: 2
@@ -49,11 +48,6 @@ Page {
         Button {
             text: qsTr("List Menu")
             onClicked: pageStack.animatorPush(Qt.resolvedUrl("ListMenu.qml"))
-        }
-
-        Button {
-            text: qsTr("Cover Counter")
-            onClicked: pageStack.animatorPush(Qt.resolvedUrl("CoverCounter.qml"))
         }
 
     }

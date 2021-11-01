@@ -8,7 +8,7 @@ Page {
             top: parent.top; bottom: urField.top
             left: parent.left; right: parent.right
         }
-        url: "https://sailfishos.org/"
+        url: "https://google.com/"
     }
     TextField {
         id: urField
@@ -16,7 +16,7 @@ Page {
             bottom: parent.bottom; left: parent.left
             right: parent.right
         }
-        text: "https://sailfishos.org/"
+        text: "https://google.com/"
         label: webView.title
         EnterKey.onClicked: webView.url = text
     }

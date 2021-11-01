@@ -30,7 +30,6 @@ Page {
             }
 
             Row {
-                anchors.horizontalCenter: page.horizontalCenter
                 TextField {
                     id: a
                     width: page.width / 2
@@ -49,18 +48,6 @@ Page {
             Button {
                 text: "Сложить"
                 onClicked: sum = parseFloat(a.text) + parseFloat(b.text), console.log(sum)
-                width: page.width
-            }
-
-            Button {
-                text: "Cos"
-                onClicked: console.log(Math.cos(a.text))
-                width: page.width
-            }
-
-            Button {
-                text: "Sin"
-                onClicked: console.log(Math.cos(b.text))
                 width: page.width
             }
         }

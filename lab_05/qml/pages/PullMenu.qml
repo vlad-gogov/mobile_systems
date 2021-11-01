@@ -28,7 +28,7 @@ Page {
                  onClicked: a.text = "Option 3"
              }
              MenuItem {
-                 text: "Option 3"
+                 text: "Option 4"
                  onClicked: a.text = "Option 4"
              }
              MenuLabel { text: "PushUpMenu" }

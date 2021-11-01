@@ -28,7 +28,5 @@ Page {
                 font.pixelSize: Theme.fontSizeExtraLarge
             }
         }
-
-
     }
 }

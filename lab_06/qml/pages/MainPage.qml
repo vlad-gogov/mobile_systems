@@ -40,17 +40,5 @@ Page {
             onClicked: pageStack.animatorPush(Qt.resolvedUrl("DataBase.qml"))
         }
 
-
-        Button {
-            text: qsTr("Configuration Value")
-            onClicked: pageStack.animatorPush(Qt.resolvedUrl("ConfigurationValue.qml"))
-
-        }
-
-        Button {
-            text: qsTr("Configuration Group")
-            onClicked: pageStack.animatorPush(Qt.resolvedUrl("ConfigurationGroup.qml"))
-        }
-
     }
 }

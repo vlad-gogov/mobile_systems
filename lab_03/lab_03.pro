@@ -19,7 +19,6 @@ SOURCES += src/lab_03.cpp
 DISTFILES += qml/lab_03.qml \
     qml/cover/CoverPage.qml \
     qml/pages/ColumnRows.qml \
-    qml/pages/DialogSum.qml \
     qml/pages/GridRectangles.qml \
     qml/pages/MainPage.qml \
     qml/pages/RectangleAnim.qml \

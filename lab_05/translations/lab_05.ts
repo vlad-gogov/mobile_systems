@@ -35,9 +35,5 @@
         <source>List Menu</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Cover Counter</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 </TS>

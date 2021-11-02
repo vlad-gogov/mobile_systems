@@ -7,7 +7,7 @@ Page {
 
     XmlListModel {
         id: xmlListModel
-        source: "http://www.cbr.ru/scripts/XML_daily.asp"
+        source: "http://www.cbr.ru/scripts/XML_daily_eng.asp"
         query: "/ValCurs/Valute"
         XmlRole { name: "Name"; query: "Name/string()" }
         XmlRole { name: "Value"; query: "Value/string()" }

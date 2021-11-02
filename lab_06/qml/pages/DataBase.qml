@@ -5,52 +5,48 @@ Page {
     id: page
 
     DAO { id: dao }
-    ListModel { id: notesListModel; }
+    ListModel { id: notesListModel }
     Column {
         anchors.fill: parent
         spacing: 10
         anchors.margins: 10
         TextField {
             id: field
-            placeholderText: "Заметка"
+            placeholderText: "Enter note here..."
         }
-
         Button {
-            id: addButton
             anchors.horizontalCenter: parent.horizontalCenter
-            text: "Добавить"
-            onClicked: { dao.insertNote(field.text); selectNotes() }
+            text: "Add"
+            onClicked: {
+                if (!field.text)
+                    return;
+                dao.insertNote(field.text);
+                updateNotes();
+            }
         }
         SilicaListView {
-            width: parent.width; height: parent.height - addButton.height - parent.spacing;
+            width: parent.width
+            height: parent.height
             model: notesListModel
-            spacing: 5
-            delegate: Label {
-                Button {
-                    width: parent.width
-                    onClicked: { dao.deleteNote(model.index); selectNotes() }
-                }
-                height: 70
-                Text {
-                    color: 'white'
-                    anchors.centerIn: parent
-                    text: model.text
-                }
+            spacing: 15
+            delegate: Button {
+                width: parent.width
+                onClicked: { dao.deleteNote(model.id); updateNotes(); }
+                text: model.name
+                height: 80
             }
         }
     }
 
-    function selectNotes() {
+    function updateNotes() {
         notesListModel.clear();
-        dao.retrieveNotes(function(notes) {
-            console.log("JOPA: ", notes.lenght)
-            for (var i = 0; i < notes.lenght; i++) {
+        dao.fetchNotes(function(notes) {
+            for (var i = 0; i < notes.length; i++) {
                 var note = notes.item(i);
-                console.log(note)
-                notesListModel.append({id: note.id, title: note.title});
+                notesListModel.append({id: note.id, name: note.name});
             }
         });
     }
 
-    Component.onCompleted: selectNotes()
+    Component.onCompleted: updateNotes()
 }

@@ -30,7 +30,6 @@ Page {
                 xmlListModel.xml = xhr.responseText;
             }
         }
-        //xhr.open('GET', "http://www.cbr.ru/scripts/XML_daily.asp", true);
         xhr.open('GET', "https://www.cbr.ru/scripts/XML_daily_eng.asp", true);
         xhr.send();
     }

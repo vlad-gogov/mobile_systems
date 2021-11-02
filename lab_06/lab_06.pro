@@ -18,8 +18,6 @@ SOURCES += src/lab_06.cpp
 
 DISTFILES += qml/lab_06.qml \
     qml/cover/CoverPage.qml \
-    qml/pages/ConfigurationGroup.qml \
-    qml/pages/ConfigurationValue.qml \
     qml/pages/CurrencyRate.qml \
     qml/pages/CurrencyRateXML.qml \
     qml/pages/DAO.qml \

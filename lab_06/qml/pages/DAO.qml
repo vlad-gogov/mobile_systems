@@ -2,38 +2,31 @@ import QtQuick 2.0
 import QtQuick.LocalStorage 2.0
 
 Item {
-    property var database;
-    property real currentVersion: 1.0
+    property var database
 
     Component.onCompleted: {
-        database = LocalStorage.openDatabaseSync("a", "1.0");
+        database = LocalStorage.openDatabaseSync("notes", "1.0");
         database.transaction(function(tx) {
-                   var result = tx.executeSql("CREATE TABLE IF NOT EXISTS a(
-                        id INTEGER PRIMARY KEY AUTOINCREMENT,
-                        name TEXT NOT NULL)");
+            tx.executeSql("CREATE TABLE IF NOT EXISTS notes(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL)");
         });
     }
 
-    function insertNote(title) {
+    function insertNote(name) {
         database.transaction(function(tx) {
-           tx.executeSql("INSERT INTO a(name) VALUES(?)", [title]);
+           var result = tx.executeSql("INSERT INTO notes(name) VALUES(?)", [name]);
         });
-        console.log("Insert in table: " + title)
     }
 
     function deleteNote(id) {
         database.transaction(function (tx) {
-            tx.executeSql("DELETE FROM a WHERE id = ?", [id])
-            console.log("Delete: ", id);
+            tx.executeSql("DELETE FROM notes WHERE id = ?", [id]);
         });
     }
 
-    function retrieveNotes(callback) {
+    function fetchNotes(callback) {
         database.readTransaction(function(tx) {
-            var result = tx.executeSql("SELECT * FROM a");
+            var result = tx.executeSql("SELECT * FROM notes");
             callback(result.rows);
-            console.log("RET: ", result.lenght)
         });
     }
-
 }

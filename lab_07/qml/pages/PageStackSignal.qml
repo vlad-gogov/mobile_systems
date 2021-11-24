@@ -15,7 +15,6 @@ Page {
             popPage++;
         else if (prevDepth < pageStack.depth)
             pushPage++;
-        console.log(pushPage, popPage)
         prevDepth = pageStack.depth;
     }
 
@@ -43,6 +42,14 @@ Page {
         }
         Label {
             text: "Глубина стека: " + pageStack.depth
+        }
+
+        Label {
+            text: "Вперед: " + pushPage
+        }
+
+        Label {
+            text: "Назад: " + popPage
         }
     }
 }

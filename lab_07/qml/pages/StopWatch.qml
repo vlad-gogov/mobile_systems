@@ -38,26 +38,28 @@ Page {
         anchors.horizontalCenter: parent.horizontalCenter
         Hours {
             id: h
-            x: 120
+            x: 50
             y: 120
             value: 0
         }
 
         Minutes {
             id: m
-            x: 180
+            x: 150
             y: 120
             value: 0
         }
 
         Seconds {
             id: s
-            x: 240
+            x: 250
             y: 120
             value: 0
         }
 
         Button {
+            x: 150
+            y: 320
             text: "Start"
             onClicked: {
                 if (text == "Start") {

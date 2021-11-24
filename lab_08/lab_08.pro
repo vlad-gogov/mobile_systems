@@ -10,32 +10,26 @@
 #   - translation filenames have to be changed
 
 # The name of your application
-TARGET = lab_07
+TARGET = lab_08
 
 CONFIG += sailfishapp
 
-SOURCES += src/lab_07.cpp
+SOURCES += src/lab_08.cpp \
+    src/Counter.cpp \
+    src/ListStrings.cpp
 
-DISTFILES += qml/lab_07.qml \
+DISTFILES += qml/lab_08.qml \
     qml/cover/CoverPage.qml \
-    qml/pages/ButtonQMLComponent.qml \
-    qml/pages/CustomButton.qml \
-    qml/pages/Hours.qml \
+    qml/pages/CounterPage.qml \
+    qml/pages/Dictionary.qml \
     qml/pages/MainPage.qml \
-    qml/pages/Minutes.qml \
-    qml/pages/PageStackSignal.qml \
-    qml/pages/Seconds.qml \
-    qml/pages/StopWatch.qml \
-    qml/pages/TextAnimation.qml \
-    qml/pages/TrafficLight.qml \
-    qml/pages/TrafficLights.qml \
-    qml/pages/TrafficLightsQMLComponents.qml \
-    rpm/lab_07.changes.in \
-    rpm/lab_07.changes.run.in \
-    rpm/lab_07.spec \
-    rpm/lab_07.yaml \
+    qml/pages/MainPage.qml \
+    rpm/lab_08.changes.in \
+    rpm/lab_08.changes.run.in \
+    rpm/lab_08.spec \
+    rpm/lab_08.yaml \
     translations/*.ts \
-    lab_07.desktop
+    lab_08.desktop
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
 
@@ -47,4 +41,8 @@ CONFIG += sailfishapp_i18n
 # planning to localize your app, remember to comment out the
 # following TRANSLATIONS line. And also do not forget to
 # modify the localized app name in the the .desktop file.
-TRANSLATIONS += translations/lab_07-de.ts
+TRANSLATIONS += translations/lab_08-de.ts
+
+HEADERS += \
+    src/Counter.h \
+    src/ListStrings.h

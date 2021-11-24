@@ -6,5 +6,6 @@ Item {
     Label {
         anchors.fill: parent
         text: parent.value
+        font.pixelSize: 70
     }
 }

@@ -1,9 +1,11 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
+
 Page {
     id: page
     allowedOrientations: Orientation.All
+
     property int prevDepth: 2
     property int pushPage: 0
     property int popPage: 0
@@ -45,11 +47,11 @@ Page {
         }
 
         Label {
-            text: "Вперед: " + pushPage
+            text: "Вперед: " + pushPage.toString()
         }
 
         Label {
-            text: "Назад: " + popPage
+            text: "Назад: " + popPage.toString()
         }
     }
 }

@@ -24,7 +24,7 @@
     },
 
     {
-        "question": "Выберите правильное объявление производного класса",
+        "question": "Выберите правильное объявление<br>производного класса",
         "answers": ["class MoreDetails:: Details", "class MoreDetails: public class Details", "class MoreDetails: public Details", "class MoreDetails: class(Details)"],
         "correct_answer":  2
     },
